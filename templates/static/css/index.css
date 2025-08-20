@@ -1,0 +1,5 @@
+        body { font-family: 'Inter', sans-serif; }
+        .error { color: #dc2626; }
+        .success { color: #16a34a; }
+        .task-card {transition: transform 0.2s; }
+        .task-card:hover { transform: scale(1.02); }

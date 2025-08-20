@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="min-h-screen">
+    <div class="max-w-6xl mx-auto p-6">
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-lg-800">Gerenciador de Tarefas</h1>
+            <p class="text-lg-600 mt-2">Organize suas tarefas de forma simples e eficiente.</p>
+        </header>
+
+        <!-- Filtros e Ordenação -->
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+            <div class="flex space-x-4 mb-4 sm:mb-0">
+                <select id="filtro-status" class="p-2 border-2 border-blue-900 bg-blue-50 hover:bg-blue-500 rounded-md text-lg-700 focus:ring-2 focus:ring-blue-500">
+                    <option value="todas">Todas</option>
+                    <option value="concluidas">Concluídas</option>
+                    <option value="pendentes">Pendentes</option>
+                </select>
+                <select id="ordenar-por" class="p-2 border-2 border-blue-900 bg-blue-50 hover:bg-blue-500 rounded-md text-lg-700 focus:ring-2 focus:ring-blue-500">
+                    <option value="id">ID</option>
+                    <option value="titulo">Título</option>
+                </select>
+            </div>
+            <button id="nova-tarefa-btn" class=" border-2 border-blue-900 bg-blue-50 text-lg-700 px-4 py-2 rounded-md hover:bg-blue-500">Nova Tarefa</button>
+        </div>
+
+        <!-- Mensagens -->
+        <div id="mensagem" class="hidden mb-6 p-4 rounded-md"></div>
+
+        <!-- Formulário (inicialmente escondido) -->
+        <div id="tarefa-form-container" class="hidden border-2 border-blue-900 bg-blue-50 p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4" id="form-title">Nova Tarefa</h2>
+            <form id="tarefa-form">
+                <input type="hidden" id="tarefa-id">
+                <div class="mb-4">
+                    <label for="titulo" class="block text-sm font-medium text-lg-700">Título</label>
+                    <input type="text" id="titulo" name="titulo" class="mt-1 p-3 w-full border rounded-md focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="descricao" class="block text-sm font-medium text-lg-700">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4" class="mt-1 p-3 w-full border rounded-md focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="concluida" class="flex items-center">
+                        <input type="checkbox" id="concluida" name="concluida" class="h-5 w-5 text-blue-600 focus:ring-blue-500">
+                        <span class="ml-2 text-sm font-medium text-lg-700">Concluída</span>
+                    </label>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Salvar</button>
+                    <button type="button" id="cancelar-form" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-gray-400">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Lista de Tarefas -->
+        <div id="tarefas-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Tarefas serão inseridas aqui -->
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

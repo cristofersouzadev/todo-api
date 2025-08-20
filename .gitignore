@@ -1,0 +1,31 @@
+# Ambiente virtual
+/venv/
+/env/
+
+# Banco de dados
+/instance/
+/backup/
+
+# Arquivos Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Migrações locais
+migrations/
+
+# Arquivos de ambiente
+.env
+*.env
+
+# Arquivos do VS Code
+.vscode/
+
+# Arquivos temporários
+*.log
+*.cache
+*.swp
+
+# Outros
+.DS_Store

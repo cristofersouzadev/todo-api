@@ -16,7 +16,7 @@ A API fornece endpoints para operações CRUD (criar, ler, atualizar, deletar) d
   - Mensagens de erro e sucesso estilizadas (ex.: fundo verde para login bem-sucedido).
 
 ## Tecnologias
-- **Backend:** Flask, Flask-SQLAlchemy, Flask-Cors, bcrypt
+- **Backend:** Flask, Flask-SQLAlchemy, Flask-Cors
 - **Frontend:** HTML, Tailwind CSS (via CDN), JavaScript
 - **Banco de Dados:** SQLite (usado localmente)
 - **Controle de Versão:** Git, GitHub

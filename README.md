@@ -1,15 +1,13 @@
 # Gerenciador de Tarefas
 
-O **Gerenciador de Tarefas** é uma API REST desenvolvida com Flask, acompanhada de uma aplicação web para gerenciamento de tarefas pessoais, com autenticação segura, checklists interativas e uma interface moderna. A interface web permite interagir com a API de forma amigável, eliminando a necessidade de ferramentas como o Postman para adicionar, editar ou visualizar tarefas.
+O **Gerenciador de Tarefas** é uma API REST desenvolvida com Flask, acompanhada de uma aplicação web para gerenciamento de tarefas, checklists interativas e uma interface moderna. A interface web permite interagir com a API de forma amigável, eliminando a necessidade de ferramentas como o Postman para adicionar, editar ou visualizar tarefas.
 
 ## Descrição
 
-A API fornece endpoints para autenticação (cadastro, login, logout, recuperação de senha) e operações CRUD (criar, ler, atualizar, deletar) de tarefas com checklists associadas. A aplicação web consome esses endpoints, oferecendo uma interface responsiva para gerenciar tarefas sem interação manual via Postman. O projeto está em fase inicial de desenvolvimento, com suporte a um usuário de teste ("Cristofer") e tarefas associadas manualmente ("Estudar Flask e SQLAlchemy", "Estudar APIs REST"). Ele utiliza SQLite localmente e está preparado para futura migração para PostgreSQL em produção.
+A API fornece endpoints para operações CRUD (criar, ler, atualizar, deletar) de tarefas com checklists associadas. A aplicação web consome esses endpoints, oferecendo uma interface responsiva para gerenciar tarefas sem interação manual via Postman. O projeto está em fase inicial de desenvolvimento. Ele utiliza SQLite localmente e está preparado para futura migração para PostgreSQL em produção.
 
 ### Funcionalidades
 - **Autenticação:**
-  - Cadastro e login com validação de senha (mínimo 8 caracteres, com maiúsculas, minúsculas e números).
-  - Recuperação de senha via e-mail (simulada no console, exibindo link de redefinição).
   - Sessões seguras com duração de 30 minutos, configuradas com `HTTPONLY=True` e `SAMESITE='Lax'`.
 - **Tarefas:**
   - Criar, editar, deletar e listar tarefas, cada uma com título, descrição e status de conclusão.

@@ -22,25 +22,6 @@ A API fornece endpoints para operações CRUD (criar, ler, atualizar, deletar) d
 - **Controle de Versão:** Git, GitHub
 - **Ferramentas:** Python 3.8+, pip, VS Code
 
-## Estrutura do Projeto
-todo-api/
-├── screenshot/
-│   ├── delete.png
-│   ├── novatarefa.png
-│   ├── sucesso.png
-│   └── tarefas.png
-├── static/
-│   ├── js/
-│   │   └── script.js
-│   ├── css/
-│   │   └── styles.css
-├── templates/
-│   └── index.html
-├── app.py
-├── requirements.txt
-├── .gitignore
-└── README.md
-
 ## Demonstração
 
 A aplicação web consome a API REST para gerenciar tarefas, substituindo a necessidade de ferramentas como o Postman. Abaixo estão capturas de tela das principais funcionalidades, rodando localmente em `http://localhost:5000`:

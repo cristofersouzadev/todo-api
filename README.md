@@ -7,8 +7,6 @@ O **Gerenciador de Tarefas** é uma API REST desenvolvida com Flask, acompanhada
 A API fornece endpoints para operações CRUD (criar, ler, atualizar, deletar) de tarefas com checklists associadas. A aplicação web consome esses endpoints, oferecendo uma interface responsiva para gerenciar tarefas sem interação manual via Postman. O projeto está em fase inicial de desenvolvimento. Ele utiliza SQLite localmente e está preparado para futura migração para PostgreSQL em produção.
 
 ### Funcionalidades
-- **Autenticação:**
-  - Sessões seguras com duração de 30 minutos, configuradas com `HTTPONLY=True` e `SAMESITE='Lax'`.
 - **Tarefas:**
   - Criar, editar, deletar e listar tarefas, cada uma com título, descrição e status de conclusão.
   - Checklists interativas por tarefa, permitindo adicionar e marcar itens como concluídos.
@@ -26,15 +24,20 @@ A API fornece endpoints para operações CRUD (criar, ler, atualizar, deletar) d
 
 ## Estrutura do Projeto
 todo-api/
+├── screenshot/
+│   ├── delete.png
+│   ├── novatarefa.png
+│   ├── sucesso.png
+│   └── tarefas.png
 ├── static/
 │   ├── js/
 │   │   └── script.js
-│   └── styles.css
+│   ├── css/
+│   │   └── styles.css
 ├── templates/
 │   └── index.html
 ├── app.py
 ├── requirements.txt
-├── Procfile
 ├── .gitignore
 └── README.md
 
